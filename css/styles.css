@@ -1,0 +1,75 @@
+ body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: black;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            color: #00ff00;
+        }
+
+        /* Canvas for Matrix Effect */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px lime;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .search-box {
+            position: relative;
+            width: 60%;
+            margin: auto;
+            z-index: 10;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            border: 3px solid #00ff00;
+            border-radius: 8px;
+            background: transparent;
+            color: #00ff00;
+            text-align: center;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border-color: lime;
+            box-shadow: 0 0 15px lime;
+        }
+
+        .glow-btn {
+            margin-top: 15px;
+            padding: 12px 30px;
+            font-size: 20px;
+            border: none;
+            background: linear-gradient(90deg, #00ff00, #009900);
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .glow-btn:hover {
+            background: linear-gradient(90deg, #009900, #00ff00);
+            box-shadow: 0 0 25px lime;
+            transform: scale(1.1);
+        }
