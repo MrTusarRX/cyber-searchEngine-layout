@@ -1,0 +1,247 @@
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: black url("http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg");
+            background-size: cover;
+            background-repeat: repeat;
+            animation: movingStars 60s linear infinite;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes movingStars {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100vh; }
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            opacity: 0;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(110vh) translateX(10vw); opacity: 0; }
+        }
+
+        /* Rotating Planet Effect */
+        #box {
+            background: url("https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg");
+            background-size: cover;
+            border: 2px solid #000;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            animation: movimiento 5s linear infinite;
+            box-shadow: 0 0 25px rgba(255,255,255,0.10),
+                        -8px -8px 15px #000 inset,
+                        2px 2px 25px #000 inset,
+                        -45px -45px 25px rgba(0,0,0,0.5) inset, 
+                        25px 25px 45px rgba(0,0,0,0.45) inset;
+            margin: 6em auto;
+            transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+        }
+
+        @keyframes movimiento {
+            0% { background-position: 0 0; }
+            100% { background-position: 355px 0; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px cyan;
+        }
+
+        .search-box {
+            width: 50%;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            border: 2px solid cyan;
+            border-radius: 8px;
+            background: transparent;
+            color: white;
+            text-align: center;
+            outline: none;
+        }
+
+        .search-btn {
+            margin-top: 10px;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            background: cyan;
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+          .bot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: cyan;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px cyan;
+            font-size: 24px;
+        }
+
+        .chatbox {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px cyan;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: cyan;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #333;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: #444;
+            color: white;
+        }
+
+        .chat-input button {
+            padding: 10px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            word-wrap: break-word;
+            font-size: 14px;
+        }
+
+        .user-message {
+            background: cyan;
+            color: black;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background: #444;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .chatbox {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px cyan;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: cyan;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #333;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .chat-input button {
+            padding: 10px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 5px;
+        }
